@@ -1,0 +1,19 @@
+#checks if int n is a common multiple of ints 1-20 inclusive
+
+def is_divisible(n):
+  i = 2
+  while i < 21:
+    if n % i != 0:
+      return False
+    i += 1
+  return True
+  
+
+
+def smallest_cm():
+  n = 380
+  while not is_divisible(n):
+    n += 20
+  return n
+
+print(smallest_cm())
